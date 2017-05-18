@@ -67,8 +67,7 @@ include_directories(
 
 add_executable(rosplan_starter_rcll src/rosplan_starter_rcll.cpp)
 
-## Add cmake target dependencies of the executable
-# add_dependencies(rosplan_interface_rcllrefbox_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(rosplan_starter_rcll ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 target_link_libraries(rosplan_starter_rcll
   ${catkin_LIBRARIES}
